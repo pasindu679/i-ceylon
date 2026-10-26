@@ -5,7 +5,7 @@ const services = [
   { no: "03", icon: "↗", title: "E-Commerce", desc: "Beautiful online stores designed to make shopping simple and engaging." },
   { no: "04", icon: "◈", title: "Custom Web Solutions", desc: "Purpose-built digital tools tailored to your business requirements." },
 ];
-import Image from "next/image";
+
 const projects = [
   {
     title: "The Modern Studio",
@@ -47,43 +47,100 @@ export default function Home() {
         </a>
       </header>
 
-     
-<div className="hero-scene sigiriya-scene">
-  <div className="sigiriya-image-wrap">
-    <Image
-      src="/sigiriya.jpg"
-      alt="Sigiriya Rock Fortress, Sri Lanka"
-      fill
-      priority
-      sizes="(max-width: 768px) 100vw, 60vw"
-      className="sigiriya-image"
-    />
+      {/* 3D HERO */}
+      <section id="home" className="relative isolate px-5 pb-12 pt-16 md:px-12 md:pt-24 lg:px-20">
+        <div className="hero-glow hero-glow-one" />
+        <div className="hero-glow hero-glow-two" />
 
-    <div className="sigiriya-image-overlay" />
+        <div className="relative z-10">
+          <p className="mb-7 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#6B705C]">
+            <span className="h-px w-8 bg-[#6B705C]" />
+            Web Design & Development Studio · Sri Lanka
+          </p>
 
-    <div className="sigiriya-image-content">
-      <span className="sigiriya-label">
-        <span className="status-dot" />
-        INSPIRED BY SRI LANKA
-      </span>
+          <h1 className="max-w-6xl text-5xl font-medium leading-[1.04] tracking-[-0.055em] sm:text-6xl md:text-8xl lg:text-[100px]">
+            We build beyond
+            <br />
+            <span className="gradient-text font-serif italic font-normal">
+              the ordinary.
+            </span>
+          </h1>
 
-      <h2>
-        Timeless
-        <br />
-        <span>heritage.</span>
-      </h2>
+          <div className="mt-8 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <p className="max-w-lg text-base leading-8 text-[#796254]">
+              We transform ideas into distinctive digital experiences through
+              thoughtful design, modern development and a little imagination.
+            </p>
+            <div className="flex flex-wrap items-center gap-5">
+              <a href="#contact" className="primary-button">
+                Start a Project <span>↗</span>
+              </a>
+              <a href="#work" className="text-sm underline underline-offset-4">
+                Explore our work
+              </a>
+            </div>
+          </div>
+        </div>
 
-      <p>Rooted in heritage. Built for the future.</p>
+        <div className="hero-scene">
+          <div className="scene-floor" />
+          <div className="orbit orbit-one" />
+          <div className="orbit orbit-two" />
+          <div className="orbit orbit-three" />
 
-      <a href="#about" className="sigiriya-explore">
-        Discover our story <span>↗</span>
-      </a>
-    </div>
+          <div className="floating-card floating-card-left glass-card">
+            <div className="flex items-center justify-between">
+              <span className="eyebrow">Creative studio</span>
+              <span className="status-dot" />
+            </div>
+            <p className="mt-5 text-xl font-medium">Ideas into</p>
+            <p className="font-serif text-2xl italic text-[#6B705C]">reality.</p>
+            <div className="mt-5 flex h-12 items-end gap-2">
+              <span className="bar bar-one" />
+              <span className="bar bar-two" />
+              <span className="bar bar-three" />
+              <span className="bar bar-four" />
+              <span className="bar bar-five" />
+            </div>
+            <p className="mt-3 text-[10px] text-[#796254]">Design · Build · Grow</p>
+          </div>
 
-    <div className="sigiriya-image-index">SRI LANKA · 01</div>
-  </div>
-</div>
+          <div className="hero-core">
+            <div className="core-ring core-ring-one" />
+            <div className="core-ring core-ring-two" />
+            <div className="core-cube">
+              <div className="cube-inner">
+                <span>i<span className="font-serif italic text-[#DDBEA9]">C</span></span>
+              </div>
+            </div>
+            <span className="core-orb core-orb-one" />
+            <span className="core-orb core-orb-two" />
+          </div>
 
+          <div className="floating-card floating-card-right glass-card">
+            <p className="eyebrow">Our approach</p>
+            <div className="mini-visual">
+              <div className="mini-glass-shape" />
+              <div className="mini-glass-shape mini-glass-shape-two" />
+            </div>
+            <p className="mt-4 text-sm font-medium">Built with intention.</p>
+            <p className="mt-1 text-[10px] text-[#796254]">Every detail matters.</p>
+          </div>
+
+          <div className="floating-pill floating-pill-top">
+            <span className="status-dot" /> Creative thinking
+          </div>
+          <div className="floating-pill floating-pill-bottom">
+            Strategy <span>✳</span> Design <span>✳</span> Technology
+          </div>
+        </div>
+
+        <div className="flex flex-wrap justify-between gap-4 border-t border-[#2D1E17]/15 pt-6 text-[10px] uppercase tracking-[0.15em] text-[#796254] sm:text-xs">
+          <span>Thoughtful by design</span>
+          <span>Built for performance</span>
+          <span>Made for growth ↗</span>
+        </div>
+      </section>
 
       {/* SERVICES */}
       <section id="services" className="px-5 py-20 md:px-12 md:py-28 lg:px-20">
