@@ -311,7 +311,7 @@ export default function Home() {
           <a href="#marketing" className="nav-link">Digital Marketing</a>
           <a href="#contact" className="nav-link">Contact</a>
         </div>
-        <p className="text-xs text-[#796254]">© {new Date().getFullYear()} i Ceylon</p>
+        <p className="text-xs text-[#796254]">© 2026 i Ceylon</p>
       </footer>
     </main>
   );
