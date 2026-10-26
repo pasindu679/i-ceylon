@@ -1,475 +1,317 @@
 
-import {
-  ArrowUpRight,
-  Palette,
-  Code2,
-  ShoppingBag,
-  Wrench,
-  Mail,
-  MessageCircle,
-  Asterisk,
-  TrendingUp,
-} from "lucide-react";
-
 const services = [
-  {
-    no: "01",
-    icon: Palette,
-    title: "Web Design",
-    desc: "Distinctive interfaces and premium visual experiences for ambitious brands.",
-  },
-  {
-    no: "02",
-    icon: Code2,
-    title: "Web Development",
-    desc: "Fast, responsive and scalable websites built around your business goals.",
-  },
-  {
-    no: "03",
-    icon: ShoppingBag,
-    title: "E-Commerce",
-    desc: "Beautiful online stores designed to make shopping simple and engaging.",
-  },
-  {
-    no: "04",
-    icon: Wrench,
-    title: "Custom Web Solutions",
-    desc: "Purpose-built digital tools tailored to your business requirements.",
-  },
+  { no: "01", icon: "✳", title: "Web Design", desc: "Distinctive interfaces and premium visual experiences for ambitious brands." },
+  { no: "02", icon: "⌘", title: "Web Development", desc: "Fast, responsive and scalable websites built around your business goals." },
+  { no: "03", icon: "↗", title: "E-Commerce", desc: "Beautiful online stores designed to make shopping simple and engaging." },
+  { no: "04", icon: "◈", title: "Custom Web Solutions", desc: "Purpose-built digital tools tailored to your business requirements." },
 ];
 
 const projects = [
   {
-    no: "01",
-    category: "WEB DESIGN / DEVELOPMENT",
-    title: "Digital Experiences",
-    description:
-      "Modern websites that communicate your brand and turn visitors into customers.",
-    className: "project-one",
-    label: "01",
+    title: "The Modern Studio",
+    category: "BUSINESS WEBSITE CONCEPT",
+    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85",
   },
   {
-    no: "02",
-    category: "E-COMMERCE",
-    title: "Online Storefronts",
-    description:
-      "Thoughtfully designed shopping experiences built for growth and conversion.",
-    className: "project-two",
-    label: "02",
+    title: "Form & Function",
+    category: "E-COMMERCE CONCEPT",
+    image: "https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=1000&q=85",
   },
   {
-    no: "03",
-    category: "CUSTOM SOLUTIONS",
-    title: "Business Systems",
-    description:
-      "Digital tools and tailored solutions that make everyday business easier.",
-    className: "project-three",
-    label: "03",
+    title: "Serene Escapes",
+    category: "HOSPITALITY CONCEPT",
+    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1000&q=85",
   },
 ];
 
 export default function Home() {
   return (
-    <main className="site-shell">
-      <header className="navbar">
-        <a href="#home" className="brand" aria-label="i Ceylon home">
-          <span className="brand-mark">i<span>C</span></span>
-          <span className="brand-name">i Ceylon<span>®</span></span>
+    <main className="site-3d overflow-hidden bg-[#FFF6EB] text-[#2D1E17]">
+      {/* NAVIGATION */}
+      <header className="relative z-30 flex items-center justify-between border-b border-[#2D1E17]/10 px-5 py-5 md:px-12 lg:px-20">
+        <a href="#home" className="text-2xl font-semibold tracking-tight">
+          <span className="text-[#6B705C]">i</span> Ceylon
+          <span className="ml-1 align-top text-[10px]">®</span>
         </a>
 
-        <nav className="nav-links" aria-label="Main navigation">
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a href="#work">Our Work</a>
-          <a href="#contact">Contact</a>
+        <nav className="hidden items-center gap-7 text-sm md:flex">
+          <a href="#home" className="nav-link">Home</a>
+          <a href="#services" className="nav-link">Services</a>
+          <a href="#work" className="nav-link">Portfolio</a>
+          <a href="#about" className="nav-link">About</a>
+          <a href="#marketing" className="nav-link">Digital Marketing</a>
         </nav>
 
-        <a href="#contact" className="nav-cta">
-          Let&apos;s Talk
-          <ArrowUpRight size={16} strokeWidth={1.7} aria-hidden="true" />
+        <a href="#contact" className="rounded-full bg-[#2D1E17] px-5 py-3 text-sm text-white transition duration-300 hover:-translate-y-1 hover:bg-[#6B705C]">
+          Let&apos;s Talk ↗
         </a>
       </header>
 
-      <section className="hero" id="home">
-        <div className="hero-background">
-          <div className="hero-orb hero-orb-one" />
-          <div className="hero-orb hero-orb-two" />
-          <div className="hero-grid" />
-        </div>
+      {/* 3D HERO */}
+      <section id="home" className="relative isolate px-5 pb-12 pt-16 md:px-12 md:pt-24 lg:px-20">
+        <div className="hero-glow hero-glow-one" />
+        <div className="hero-glow hero-glow-two" />
 
-        <div className="hero-content">
-          <div className="eyebrow">
-            <span className="status-dot" />
-            DIGITAL DESIGN & DEVELOPMENT STUDIO
-          </div>
+        <div className="relative z-10">
+          <p className="mb-7 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#6B705C]">
+            <span className="h-px w-8 bg-[#6B705C]" />
+            Web Design & Development Studio · Sri Lanka
+          </p>
 
-          <h1>
-            We build
+          <h1 className="max-w-6xl text-5xl font-medium leading-[1.04] tracking-[-0.055em] sm:text-6xl md:text-8xl lg:text-[100px]">
+            We build beyond
             <br />
-            <span className="hero-serif">digital</span> experiences
-            <br />
-            that move you
-            <span className="hero-period">.</span>
+            <span className="gradient-text font-serif italic font-normal">
+              the ordinary.
+            </span>
           </h1>
 
-          <p className="hero-description">
-            We help ambitious businesses build a powerful digital presence
-            through thoughtful design, purposeful technology and experiences
-            that make a difference.
-          </p>
-
-          <div className="hero-actions">
-            <a href="#contact" className="button button-primary">
-              Start a Project
-              <ArrowUpRight size={17} strokeWidth={1.7} aria-hidden="true" />
-            </a>
-            <a href="#work" className="button button-secondary">
-              Explore Our Work
-            </a>
-          </div>
-
-          <div className="hero-bottom">
-            <span>DESIGNED WITH PURPOSE</span>
-            <span className="hero-bottom-line" />
-            <span>BUILT FOR GROWTH</span>
-          </div>
-        </div>
-
-        <div className="hero-visual" aria-hidden="true">
-          <div className="visual-orbit orbit-one" />
-          <div className="visual-orbit orbit-two" />
-          <div className="visual-orbit orbit-three" />
-
-          <div className="visual-core">
-            <div className="core-ring">
-              <span className="core-i">i</span>
-              <span className="core-c">C</span>
+          <div className="mt-8 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <p className="max-w-lg text-base leading-8 text-[#796254]">
+              We transform ideas into distinctive digital experiences through
+              thoughtful design, modern development and a little imagination.
+            </p>
+            <div className="flex flex-wrap items-center gap-5">
+              <a href="#contact" className="primary-button">
+                Start a Project <span>↗</span>
+              </a>
+              <a href="#work" className="text-sm underline underline-offset-4">
+                Explore our work
+              </a>
             </div>
           </div>
+        </div>
 
-          <div className="floating-card floating-card-top">
-            <span className="mini-dot" />
-            <span>Creative thinking</span>
+        <div className="hero-scene">
+          <div className="scene-floor" />
+          <div className="orbit orbit-one" />
+          <div className="orbit orbit-two" />
+          <div className="orbit orbit-three" />
+
+          <div className="floating-card floating-card-left glass-card">
+            <div className="flex items-center justify-between">
+              <span className="eyebrow">Creative studio</span>
+              <span className="status-dot" />
+            </div>
+            <p className="mt-5 text-xl font-medium">Ideas into</p>
+            <p className="font-serif text-2xl italic text-[#6B705C]">reality.</p>
+            <div className="mt-5 flex h-12 items-end gap-2">
+              <span className="bar bar-one" />
+              <span className="bar bar-two" />
+              <span className="bar bar-three" />
+              <span className="bar bar-four" />
+              <span className="bar bar-five" />
+            </div>
+            <p className="mt-3 text-[10px] text-[#796254]">Design · Build · Grow</p>
           </div>
 
-          <div className="floating-card floating-card-bottom">
-            <Asterisk size={17} strokeWidth={1.5} aria-hidden="true" />
-            <span>Made for growth</span>
-            <ArrowUpRight size={14} strokeWidth={1.7} aria-hidden="true" />
+          <div className="hero-core">
+            <div className="core-ring core-ring-one" />
+            <div className="core-ring core-ring-two" />
+            <div className="core-cube">
+              <div className="cube-inner">
+                <span>i<span className="font-serif italic text-[#DDBEA9]">C</span></span>
+              </div>
+            </div>
+            <span className="core-orb core-orb-one" />
+            <span className="core-orb core-orb-two" />
           </div>
 
-          <div className="visual-caption">
-            <span>FIG. 01</span>
-            <span>DESIGN IN MOTION</span>
+          <div className="floating-card floating-card-right glass-card">
+            <p className="eyebrow">Our approach</p>
+            <div className="mini-visual">
+              <div className="mini-glass-shape" />
+              <div className="mini-glass-shape mini-glass-shape-two" />
+            </div>
+            <p className="mt-4 text-sm font-medium">Built with intention.</p>
+            <p className="mt-1 text-[10px] text-[#796254]">Every detail matters.</p>
+          </div>
+
+          <div className="floating-pill floating-pill-top">
+            <span className="status-dot" /> Creative thinking
+          </div>
+          <div className="floating-pill floating-pill-bottom">
+            Strategy <span>✳</span> Design <span>✳</span> Technology
           </div>
         </div>
 
-        <div className="hero-side-note">INDEPENDENT DIGITAL STUDIO · SRI LANKA</div>
-      </section>
-
-      <section className="ticker" aria-label="Our approach">
-        <div className="ticker-track">
-          {[
-            "Strategy",
-            "Design",
-            "Technology",
-            "Innovation",
-            "Strategy",
-            "Design",
-            "Technology",
-            "Innovation",
-          ].map((item, index) => (
-            <span className="ticker-item" key={`${item}-${index}`}>
-              {item}
-              <Asterisk size={15} strokeWidth={1.5} aria-hidden="true" />
-            </span>
-          ))}
+        <div className="flex flex-wrap justify-between gap-4 border-t border-[#2D1E17]/15 pt-6 text-[10px] uppercase tracking-[0.15em] text-[#796254] sm:text-xs">
+          <span>Thoughtful by design</span>
+          <span>Built for performance</span>
+          <span>Made for growth ↗</span>
         </div>
       </section>
 
-      <section className="section services-section" id="services">
+      {/* SERVICES */}
+      <section id="services" className="px-5 py-20 md:px-12 md:py-28 lg:px-20">
         <div className="section-heading">
           <div>
-            <span className="section-kicker">01 — WHAT WE DO</span>
-            <h2>
-              Digital craft.
-              <br />
-              <span className="heading-serif">Real impact.</span>
-            </h2>
+            <p className="eyebrow text-[#6B705C]">What we do</p>
+            <h2 className="section-title">Ideas into impact<span className="text-[#6B705C]">.</span></h2>
           </div>
-
-          <p className="section-intro">
-            Great digital experiences don&apos;t happen by accident. We bring
-            strategy, creativity and technology together to build solutions
-            that work beautifully.
+          <p className="max-w-md leading-7 text-[#796254]">
+            Digital solutions built to make your business stand out, earn trust
+            and create better experiences for your customers.
           </p>
         </div>
 
-        <div className="services-grid">
-          {services.map((service) => {
-            const Icon = service.icon;
-
-            return (
-              <article className="service-card" key={service.no}>
-                <div className="service-card-top">
-                  <span className="service-number">{service.no}</span>
-                  <span className="service-icon">
-                    <Icon
-                      size={25}
-                      strokeWidth={1.5}
-                      aria-hidden="true"
-                    />
-                  </span>
-                </div>
-
-                <div className="service-card-content">
-                  <h3>{service.title}</h3>
-                  <p>{service.desc}</p>
-                </div>
-
-                <a
-                  className="service-link"
-                  href="#contact"
-                  aria-label={`Discuss ${service.title}`}
-                >
-                  <span>
-                    <ArrowUpRight
-                      size={17}
-                      strokeWidth={1.7}
-                      aria-hidden="true"
-                    />
-                  </span>
-                </a>
-              </article>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="about-section" id="about">
-        <div className="about-decoration" aria-hidden="true">
-          <div className="about-ring about-ring-one" />
-          <div className="about-ring about-ring-two" />
-          <div className="about-ring about-ring-three" />
-          <div className="about-center">
-            <Asterisk size={48} strokeWidth={1.1} />
-          </div>
-        </div>
-
-        <div className="about-content">
-          <span className="section-kicker">02 — A LITTLE ABOUT US</span>
-
-          <h2>
-            Good design is
-            <br />
-            more than how it
-            <br />
-            <span className="heading-serif">looks.</span>
-          </h2>
-
-          <p>
-            It&apos;s how it works. How it feels. And how it helps your business
-            move forward. At i Ceylon, we believe every business deserves a
-            digital presence that reflects its ambition.
-          </p>
-
-          <p>
-            We combine clean design, reliable development and a detail-focused
-            approach to create digital experiences with purpose.
-          </p>
-
-          <a href="#contact" className="text-link">
-            Get to know us
-            <ArrowUpRight size={17} strokeWidth={1.7} aria-hidden="true" />
-          </a>
-        </div>
-
-        <div className="about-note">
-          <span className="about-note-icon">
-            <Asterisk size={26} strokeWidth={1.4} aria-hidden="true" />
-          </span>
-          <span className="about-note-title">Thoughtfully made.</span>
-          <span className="about-note-subtitle">Purposefully built.</span>
-        </div>
-      </section>
-
-      <section className="section work-section" id="work">
-        <div className="section-heading">
-          <div>
-            <span className="section-kicker">03 — SELECTED WORK</span>
-            <h2>
-              Made to make
-              <br />
-              <span className="heading-serif">an impression.</span>
-            </h2>
-          </div>
-
-          <p className="section-intro">
-            Every project begins with a challenge and ends with a digital
-            experience designed around what matters most.
-          </p>
-        </div>
-
-        <div className="projects-grid">
-          {projects.map((project) => (
-            <article
-              className={`project-card ${project.className}`}
-              key={project.no}
-            >
-              <div className="project-art">
-                <div className="project-art-orbit project-art-orbit-one" />
-                <div className="project-art-orbit project-art-orbit-two" />
-                <div className="project-art-shape">
-                  <span className="project-art-letter">iC</span>
-                </div>
-                <span className="project-art-index">{project.label}</span>
-                <span className="project-art-arrow">
-                  <ArrowUpRight
-                    size={19}
-                    strokeWidth={1.5}
-                    aria-hidden="true"
-                  />
-                </span>
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {services.map((service) => (
+            <article key={service.no} className="service-card">
+              <div className="flex items-center justify-between">
+                <span className="service-icon">{service.icon}</span>
+                <span className="text-xs text-[#796254]">{service.no}</span>
               </div>
-
-              <div className="project-info">
-                <span className="project-category">{project.category}</span>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-              </div>
+              <h3 className="mt-9 text-xl font-medium">{service.title}</h3>
+              <p className="mt-3 min-h-20 text-sm leading-7 text-[#796254]">{service.desc}</p>
+              <a href="#contact" className="service-link">
+                Discuss a project <span>↗</span>
+              </a>
             </article>
           ))}
         </div>
+      </section>
 
-        <p className="work-footnote">
-          Your business could be our next project.
+      {/* PORTFOLIO */}
+      <section id="work" className="portfolio-section px-5 py-20 md:px-12 md:py-28 lg:px-20">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow text-[#DDBEA9]">Selected concepts</p>
+            <h2 className="section-title text-[#FFF6EB]">Made to stand out<span className="text-[#DDBEA9]">.</span></h2>
+          </div>
+          <p className="max-w-md leading-7 text-[#DDBEA9]">
+            A glimpse of the visual directions and digital experiences we can
+            create for growing brands.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-8 md:grid-cols-3">
+          {projects.map((project, index) => (
+            <article key={project.title} className="project-card" style={{ animationDelay: `${index * 120}ms` }}>
+              <div className="project-image-wrap">
+                <img src={project.image} alt={project.title + " visual concept"} className="project-image" />
+                <span className="project-arrow">↗</span>
+                <span className="project-concept">CONCEPT PROJECT</span>
+              </div>
+              <p className="mt-5 text-[10px] tracking-[0.2em] text-[#DDBEA9]">{project.category}</p>
+              <h3 className="mt-2 text-2xl text-[#FFF6EB]">{project.title}</h3>
+            </article>
+          ))}
+        </div>
+        <p className="mt-8 text-xs text-[#DDBEA9]/75">
+          These are visual concept examples, not completed client projects.
         </p>
       </section>
 
-      <section className="marketing-section">
-        <div className="marketing-content">
-          <span className="section-kicker">04 — COMING SOON</span>
-
-          <h2>
-            More ways to
-            <br />
-            <span className="heading-serif">grow digitally.</span>
-          </h2>
-
-          <p>
-            We&apos;re preparing new digital marketing services to help
-            businesses reach the right audience and grow their online presence.
-          </p>
-
-          <span className="coming-soon-label">
-            <span className="status-dot" />
-            DIGITAL MARKETING · COMING SOON
-          </span>
+      {/* ABOUT */}
+      <section id="about" className="grid gap-12 px-5 py-20 md:grid-cols-2 md:items-center md:px-12 md:py-28 lg:px-20">
+        <div className="about-visual">
+          <div className="about-back-shape" />
+          <div className="about-image-card">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1100&q=85" alt="Creative workspace" />
+          </div>
+          <div className="about-note">
+            <span className="text-3xl">✳</span>
+            <p className="mt-2 font-serif text-xl italic">Create with purpose.</p>
+            <p className="mt-1 text-xs text-[#796254]">i Ceylon · Sri Lanka</p>
+          </div>
         </div>
 
-        <div className="marketing-visual" aria-label="Upcoming marketing services">
-          <div className="marketing-tile marketing-tile-one">
-            <span className="marketing-tile-label">01 / SEARCH</span>
-            <span className="marketing-tile-title">SEO</span>
-            <ArrowUpRight size={22} strokeWidth={1.5} aria-hidden="true" />
+        <div>
+          <p className="eyebrow text-[#6B705C]">The i Ceylon approach</p>
+          <h2 className="section-title mt-5">
+            Thoughtful details.
+            <br />
+            <span className="gradient-text font-serif italic font-normal">Meaningful impact.</span>
+          </h2>
+          <p className="mt-7 leading-8 text-[#796254]">
+            A website should do more than look good. It should tell your story,
+            communicate your value and help customers take the next step.
+          </p>
+          <p className="mt-4 leading-8 text-[#796254]">
+            We bring creative direction and purposeful development together to
+            build a stronger digital foundation for your business.
+          </p>
+          <a href="#contact" className="primary-button mt-8">
+            Work with us <span>↗</span>
+          </a>
+        </div>
+      </section>
+
+      {/* DIGITAL MARKETING — COMING SOON */}
+      <section id="marketing" className="marketing-section mx-4 my-5 overflow-hidden rounded-3xl px-6 py-12 md:mx-8 md:px-14 md:py-16">
+        <div className="marketing-orb marketing-orb-one" />
+        <div className="marketing-orb marketing-orb-two" />
+
+        <div className="relative z-10 grid gap-10 md:grid-cols-2 md:items-center">
+          <div>
+            <div className="coming-badge">
+              <span className="status-dot" /> COMING SOON
+            </div>
+            <h2 className="mt-6 text-4xl font-medium leading-tight tracking-tight text-[#FFF6EB] md:text-6xl">
+              Your next level
+              <br />
+              <span className="font-serif italic text-[#DDBEA9]">starts here.</span>
+            </h2>
+            <p className="mt-5 max-w-lg leading-8 text-[#F1E3D3]">
+              We&apos;re preparing a new way to help brands grow online.
+              Digital marketing services are coming soon to i Ceylon.
+            </p>
+            <a href="#contact" className="marketing-button mt-7">
+              Get notified <span>↗</span>
+            </a>
           </div>
 
-          <div className="marketing-tile marketing-tile-two">
-            <span className="marketing-tile-label">02 / COMMUNITY</span>
-            <span className="marketing-tile-title">SOCIAL</span>
-            <Asterisk size={22} strokeWidth={1.5} aria-hidden="true" />
-          </div>
-
-          <div className="marketing-tile marketing-tile-three">
-            <span className="marketing-tile-label">03 / PERFORMANCE</span>
-            <span className="marketing-tile-title">GROWTH</span>
-            <TrendingUp size={22} strokeWidth={1.5} aria-hidden="true" />
+          <div className="marketing-scene">
+            <div className="marketing-ring" />
+            <div className="marketing-tile marketing-tile-one">SEO<span>↗</span></div>
+            <div className="marketing-tile marketing-tile-two">SOCIAL<span>✳</span></div>
+            <div className="marketing-tile marketing-tile-three">GROWTH<span>↑</span></div>
+            <div className="marketing-center">i<span>C</span></div>
           </div>
         </div>
       </section>
 
-      <section className="contact-section" id="contact">
-        <div className="contact-heading">
-          <span className="section-kicker">05 — HAVE A PROJECT IN MIND?</span>
-          <h2>
-            Let&apos;s make
+      {/* CONTACT */}
+      <section id="contact" className="contact-section mx-4 my-8 rounded-3xl px-6 py-14 md:mx-8 md:px-14 md:py-20">
+        <p className="eyebrow text-[#F1E3D3]">Have a project in mind?</p>
+        <div className="mt-6 grid gap-10 md:grid-cols-2 md:items-end">
+          <h2 className="text-4xl font-medium leading-tight tracking-tight text-[#FFF6EB] md:text-6xl">
+            Let&apos;s build
             <br />
-            something
-            <br />
-            <span className="heading-serif">meaningful.</span>
+            <span className="font-serif italic text-[#DDBEA9]">something great.</span>
           </h2>
-
-          <p>
-            Tell us about your idea. We&apos;d love to hear what you&apos;re
-            building and explore how we can help.
-          </p>
-
-          <a href="mailto:iceylonpvtltd@gmail.com" className="button button-light">
-            Start a Conversation
-            <ArrowUpRight size={17} strokeWidth={1.7} aria-hidden="true" />
-          </a>
-        </div>
-
-        <div className="contact-details">
-          <span className="contact-details-kicker">GET IN TOUCH</span>
-
-          <a
-            className="contact-row"
-            href="https://wa.me/94712695820"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="contact-row-icon">
-              <MessageCircle size={20} strokeWidth={1.5} aria-hidden="true" />
-            </span>
-            <span className="contact-row-content">
-              <span className="contact-row-label">WHATSAPP / PHONE</span>
-              <span className="contact-row-value">071 269 5820</span>
-            </span>
-            <ArrowUpRight size={17} strokeWidth={1.5} aria-hidden="true" />
-          </a>
-
-          <a
-            className="contact-row"
-            href="mailto:iceylonpvtltd@gmail.com"
-          >
-            <span className="contact-row-icon">
-              <Mail size={20} strokeWidth={1.5} aria-hidden="true" />
-            </span>
-            <span className="contact-row-content">
-              <span className="contact-row-label">EMAIL</span>
-              <span className="contact-row-value">
-                iceylonpvtltd@gmail.com
-              </span>
-            </span>
-            <ArrowUpRight size={17} strokeWidth={1.5} aria-hidden="true" />
-          </a>
-
-          <div className="contact-availability">
-            <span className="status-dot" />
-            OPEN FOR SELECT PROJECTS
+          <div>
+            <p className="mb-6 leading-7 text-[#F1E3D3]">
+              Tell us about your idea. Let&apos;s discuss how we can bring it
+              to life.
+            </p>
+            <a href="https://wa.me/94712695820" target="_blank" rel="noreferrer" className="contact-row">
+              <span className="contact-symbol">↗</span>
+              <span><small>WHATSAPP / PHONE</small><strong>071 269 5820</strong></span>
+              <span className="ml-auto">↗</span>
+            </a>
+            <a href="mailto:iceylonpvtltd@gmail.com" className="contact-row">
+              <span className="contact-symbol">✉</span>
+              <span><small>EMAIL US</small><strong>iceylonpvtltd@gmail.com</strong></span>
+              <span className="ml-auto">↗</span>
+            </a>
           </div>
-        </div>
-
-        <div className="contact-watermark" aria-hidden="true">
-          iC
         </div>
       </section>
 
-      <footer className="footer">
-        <a href="#home" className="brand footer-brand" aria-label="i Ceylon home">
-          <span className="brand-mark">i<span>C</span></span>
-          <span className="brand-name">i Ceylon<span>®</span></span>
+      {/* FOOTER */}
+      <footer className="flex flex-col justify-between gap-6 px-5 py-8 md:flex-row md:items-center md:px-12 lg:px-20">
+        <a href="#home" className="text-2xl font-semibold tracking-tight">
+          <span className="text-[#6B705C]">i</span> Ceylon
         </a>
-
-        <span className="footer-copy">
-          © 2026 i Ceylon. Crafted with purpose.
-        </span>
-
-        <a href="#home" className="footer-back">
-          BACK TO TOP
-          <ArrowUpRight size={14} strokeWidth={1.7} aria-hidden="true" />
-        </a>
+        <p className="text-sm text-[#796254]">Web Design & Development · Sri Lanka</p>
+        <div className="flex flex-wrap gap-5 text-sm text-[#796254]">
+          <a href="#services" className="nav-link">Services</a>
+          <a href="#marketing" className="nav-link">Digital Marketing</a>
+          <a href="#contact" className="nav-link">Contact</a>
+        </div>
+        <p className="text-xs text-[#796254]">© 2026 i Ceylon</p>
       </footer>
     </main>
   );
